@@ -1,0 +1,120 @@
+Microsoft Windows [versão 10.0.22621.5189]
+(c) Microsoft Corporation. Todos os direitos reservados.
+
+C:\Users\Aluno>cd Desktop
+
+C:\Users\Aluno\Desktop>mkdir projeto_responsivo
+
+C:\Users\Aluno\Desktop>cd projeto_responsivo
+
+C:\Users\Aluno\Desktop\projeto_responsivo> mkdir public
+
+C:\Users\Aluno\Desktop\projeto_responsivo> mkdir src
+
+C:\Users\Aluno\Desktop\projeto_responsivo> mkdir docs
+
+C:\Users\Aluno\Desktop\projeto_responsivo>cd public
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>mkdir html
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>mkdir css
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>mkdir js
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>mkdir media
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>cd media
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\media>dir
+ O volume na unidade C é Windows
+ O Número de Série do Volume é 2C5D-4E9D
+
+ Pasta de C:\Users\Aluno\Desktop\projeto_responsivo\public\media
+
+25/07/2025  20:25    <DIR>          .
+25/07/2025  20:25    <DIR>          ..
+               0 arquivo(s)              0 bytes
+               2 pasta(s)   133.013.311.488 bytes disponíveis
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\media>cd ..
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>cd html
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\html>echo Projeto Responsivo > home.html
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\html>cd ..
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>cd css
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\css>echo body { margin: 0; padding: 0; background-color: lightgray; } > theme.css
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\css>cd ..
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>cd media
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\media>mkdir imagens
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\media>mkdir fontes
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\media>cd ..
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>cd media
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\media>cd ..\..
+
+C:\Users\Aluno\Desktop\projeto_responsivo>cd docs
+
+C:\Users\Aluno\Desktop\projeto_responsivo\docs>copy ..\public\css\theme.css theme.css
+        1 arquivo(s) copiado(s).
+
+C:\Users\Aluno\Desktop\projeto_responsivo\docs>cd ..
+
+C:\Users\Aluno\Desktop\projeto_responsivo>cd public
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>cd js
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\js>echo console.log("Site responsivo pronto!"); > responsivo.js
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\js>echo console.log("Utilitários carregados!"); > utils.js
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\js>rename utils.js helpers.js
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public\js>cd ..
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>tree
+Listagem de caminhos de pasta para o volume Windows
+O número de série do volume é 2C5D-4E9D
+C:.
+├───css
+├───html
+├───js
+└───media
+    ├───fontes
+    └───imagens
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>tree /f
+Listagem de caminhos de pasta para o volume Windows
+O número de série do volume é 2C5D-4E9D
+C:.
+├───css
+│       theme.css
+│
+├───html
+│       home.html
+│
+├───js
+│       helpers.js
+│       responsivo.js
+│
+└───media
+    ├───fontes
+    └───imagens
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>del ..\docs\theme.css
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>type html\home.html
+Projeto Responsivo
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>notepad html\home.html
+
+C:\Users\Aluno\Desktop\projeto_responsivo\public>
