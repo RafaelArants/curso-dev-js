@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Tags HTML</title>
+</head>
+<body>
+   
+<header>
+    <h1>Guia Rápido de Tags HTML</h1>
+</header>
+
+<hr>
+
+<h2>Títulos (H1 ao H6)</h2>
+<p>Os títulos são utilizados para definir hierarquia e importância na página!</p>
+<h1>Título 1 - O mais importante</h1>
+<h2>Título 2</h2>
+<h3>Título 3</h3>
+<h4>Título 4</h4>
+<h5>Título 5</h5>
+<h6>Título 6 - O menos importante</h6>
+
+<hr>
+
+<h2>Parágrafos e Formatações (p, strong/b, em/i, br)</h2>
+<p>O parágrafo será utilizado para pequenos blocos de texto e formatação para dar destaque em trechos necessários.</p>
+
+<p>
+    Deixar um texto em <strong>Negrito</strong> Semântico
+    <br>
+    Deixar um texto em <b>Negrito</b>
+    <br>
+    Dar ênfase em um <em>Texto</em> Semântico
+    <br>
+    Dar ênfase em um <i>Texto</i>
+</p>
+
+<hr>
+
+<h2>Listas (UL, OL, DL, LI)</h2>
+<h3>Lista Não Ordenada UL - Quando NÃO há uma ordem específica.</h3>
+
+<ul>
+    <li>Café</li>
+    <li>Pão</li>
+    <li>Arroz</li>
+    <li>Feijão</li>
+</ul>
+
+<h3>Lista Ordenada OL - Quando há uma ordem específica.</h3>
+<ol>
+    <li>Separe os ingredientes</li>
+    <li>Coloque-os no liquidificador</li>
+    <li>Coloque em uma jarra e sirva seu suco</li>
+</ol>
+
+<h3>Lista de Definição DL - Para termos e definições</h3>
+
+<dl>
+    <dt>HTML</dt>
+    <dd>Linguagem de marcação para criar estruturas web.</dd>
+</dl>
+
+<hr>
+
+<!-- <h3>Comentário CTRL + ; </h3> -->
+
+<h2>Links (A)</h2>
+<p>Ele cria o link (Âncora) entre páginas e recursos</p>
+
+<a href="https://www.google.com.br">Ir para o Google</a>
+<br>
+<a href="https://www.google.com.br" target="_blank" rel="noopener noreferrer">Ir para o Google em uma nova aba</a>
+
+<hr>
+
+<h2>Imagens (IMG, Figure)</h2>
+<p>Para adicionar imagens a sua página</p>
+
+<h3>IMG</h3>
+
+<img src="https://picsum.photos/300/150" alt="Exemplo de imagens de 300x150 pixels!">
+<br>
+
+<h3>Figure</h3>
+
+<figure>
+    <img src="https://picsum.photos/300/150" alt="Exemplo de imagem de 300x150 pixels!">
+    <figcaption>Exemplo de imagem de 300x150 pixels!</figcaption>
+</figure>
+
+<hr>
+
+<h2>Tabelas (table, tr, th, thead, tbody, tfoot)</h2>
+<p>utilizadas para trabalhar com linhas e colunas</p>
+
+<table border="1">
+    <thead>
+        <!-- TR == Linha -->
+        <tr>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Preço Unitário</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Maçã</td>
+            <td>5</td>
+            <td>R$ 0,60</td>
+        </tr>
+        <tr>
+            <td>Pera</td>
+            <td>10</td>
+            <td>R$ 1,00</td>
+        </tr>
+        <tr>
+            <td>Melancia</td>
+            <td>3</td>
+            <td>R$ 10,00</td>
+        </tr>
+        <tr>
+            <td>Banana</td>
+            <td>15</td>
+            <td>R$ 0,90</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td colspan="2">Total</td>
+                <td>R$ 15,60</td>
+            </tr>
+        </tfoot>
+    </tbody>
+</table>
+
+<hr>
+
+<h2>DIV</h2>
+<P>Divisórias do Código</P>
+
+<div>
+    <p>Parágrafo dentro da Div</p>
+</div>
+
+</body>
+</html>
