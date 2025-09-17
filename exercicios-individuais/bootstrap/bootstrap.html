@@ -5,56 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade de Bootstrap CDN</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container bg-dark-subtle">
-          <a class="navbar-brand" href="#inicio">
-            <img src="burguer_house_logo.png" alt="Bootstrap" width="150" height="150">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#inicio">Início</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#sobre">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#depoimentos">Depoimentos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#cardapio">Cardápio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contato">Contato</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <style>
+  .img-original {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .card {
+    background-color: transparent;
+    border: 0px;
+  }
 
-      <div class="container mt-5 text-center" id="sobre">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <img src="burguer_house.png" alt="" class="img-fluid rounded">
-                </div>
+  .btn-botao{
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #db921b;
+  --bs-btn-border-color: #db921b;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #db921b;
+  --bs-btn-hover-border-color: #db921b;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #db921b;
+  --bs-btn-active-border-color: #db921b;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #db921b;
+  --bs-btn-disabled-border-color: #db921b;
+}
+  
+
+</style>
+</head>
+
+<body class="bg-dark-subtle">
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">
+        <img src="burguer_house_logo.png" alt="Bootstrap" width="150" height="150" id="inicio">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#inicio">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#depoimentos">Depoimentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#cardapio">Cardápio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5 text-center" id="sobre">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <img src="burguer_house.png" alt="" class="img-fluid rounded">
+        </div>
             
 
-                <div class="col-12 col-md-6 d-flex align-items-center">
-                    <div>
-                        <h2>Sobre nós</h2>
-                        <p>Desde 2020, preparamos não apenas hambúrgueres artesanais, mas momentos que reúnem famílias e amigos em experiências únicas. Nosso espaço conta com ambiente amplo e área kids, pensado para receber todas as idades com conforto e diversão. Aqui, cada receita é feita com ingredientes frescos e selecionados, porque acreditamos que sabor e qualidade caminham juntos. Nosso objetivo é ser a melhor hamburgueria artesanal de Presidente Prudente, oferecendo não só o melhor hambúrguer da cidade, mas também um atendimento caloroso e um ambiente que faz você se sentir em casa.</p>
-                    </div>
-                </div>
+        <div class="col-12 col-md-6 d-flex align-items-center">
+            <div>
+                <h2>Sobre nós</h2>
+                <p>Desde 2020, preparamos não apenas hambúrgueres artesanais, mas momentos que reúnem famílias e amigos em experiências únicas. Nosso espaço conta com ambiente amplo e área kids, pensado para receber todas as idades com conforto e diversão. Aqui, cada receita é feita com ingredientes frescos e selecionados, porque acreditamos que sabor e qualidade caminham juntos. Nosso objetivo é ser a melhor hamburgueria artesanal de Presidente Prudente, oferecendo não só o melhor hambúrguer da cidade, mas também um atendimento caloroso e um ambiente que faz você se sentir em casa.</p>
             </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container text-center mt-3" id="depoimentos">
+    <h2>Depoimentos de nossos clientes</h2>
+
+    <div class="row mt-3">
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card">
+          <img src="Clientes (3).png" class="img-original rounded-4" alt="...">
+          <div class="card-body">
+            <p class="card-text"><b>O melhor hamburguer da cidade!</b><p>
+          </div>
+        </div>
       </div>
 
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card">
+          <img src="Clientes (2).png" class="img-original rounded-4" alt="...">
+          <div class="card-body">
+            <p class="card-text"><b>Hamburguer muito bom! Além de haver espaço KIDS!</b></p>
+          </div>
+        </div>
+      </div>
 
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card">
+          <img src="Clientes (1).png" class="img-original rounded-4" alt="...">
+          <div class="card-body">
+            <p class="card-text"><b>Localização muito boa e lanche maravilhoso!</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="container text-center mt-3" id="cardapio">
+    <h2>Os mais pedidos</h2>
+
+    <div class="row mt-4">
+      <div class="col-12 col-md-3 mb-3">
+        <div class="card">
+          <img src="Lanches (1).png" class="card-img-top rounded-5" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">House Classic - R$ 28,00</h5>
+            <p class="card-text">Simples, artesanal e cheio de sabor.</p>
+            <a href="https://wa.me/5518982060021?text=Gostaria%20do%20lanche%20House%20Classic!" class="btn btn-botao">Peça já!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-3 mb-3">
+        <div class="card">
+          <img src="Lanches (2).png" class="card-img-top rounded-5" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">House Onion - R$ 33,00</h5>
+            <p class="card-text">Dois hambúrgueres artesanais, com cebola caramelizada.</p>
+            <a href="https://wa.me/5518982060021?text=Gostaria%20do%20lanche%20House%20Onion!" class="btn btn-botao">Peça já!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-3 mb-3">
+        <div class="card">
+          <img src="Lanches (3).png" class="card-img-top rounded-5" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Double House - R$ 35,00</h5>
+            <p class="card-text">Dois hambúrgueres artesanais, com dobro de sabor.</p>
+            <a href="https://wa.me/5518982060021?text=Gostaria%20do%20lanche%20Double%20House!" class="btn btn-botao">Peça já!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-3 mb-3">
+        <div class="card">
+          <img src="Lanches (4).png" class="card-img-top rounded-5" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Double Bacon - R$ 38,00</h5>
+            <p class="card-text">Dois hambúrgueres artesanais, com bacon crocante.</p>
+            <a href="https://wa.me/5518982060021?text=Gostaria%20do%20lanche%20Double%20Bacon!" class="btn btn-botao">Peça já!</a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="container mt-5" id="contato">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h2>Mande sua opinião!</h2>
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome:</label>
+          <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+        </div>
+        <div class="mb-3">
+          <label for="tel" class="form-label">Telefone:</label>
+          <input type="text" class="form-control" id="tel" placeholder="(18) 99999-9999">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="mensagem" class="form-label">Mensagem:</label>
+          <textarea class="form-control" id="mensagem" placeholder="Digite sua mensagem" rows="3"></textarea>
+        </div>
+      </div>    
+
+        <div class="col-12 col-md-6 d-flex align-items-center">
+            <div>
+                <h2>Endereço</h2>
+                <p>Rua Roberto Mange, 357 - Jardim Marupiara</p>
+                <p>Presidente Prudente-SP</p>
+                <p>Horário de Funcionamento: Ter-Dom 17h as 00h</p>
+
+                <a class="btn btn-botao" href="https://www.ifood.com.br/inicio" role="button">Ifood</a>
+                <a class="btn btn-botao" href="https://wa.me/5518982060021" role="button">WhatsApp</a>
+                <a class="btn btn-botao" href="https://www.instagram.com/senaiprudente/" role="button">Instagram</a>
+            </div>
+        </div>
+    </div>
+  </div>
 
 
     
