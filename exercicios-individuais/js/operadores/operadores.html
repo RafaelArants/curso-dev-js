@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Operadores</title>
+</head>
+<body>
+    
+    <p>Aperte F12 para ver os resultados</p>
+
+    <script>
+
+        function exercicio1(){
+            const numero1 = Number(prompt("Informe um número"));
+            const numero2 = Number(prompt("Informe outro número"));
+            console.log(numero1 + numero2);
+            console.log(numero1 - numero2);
+            console.log(numero1 * numero2);
+            console.log(numero1 / numero2);
+        }
+
+        //exercicio1();
+
+        function exercicio2(){
+            const numero3 = parseInt(prompt("Informe um número"));
+            console.log(`O número informado foi ${numero3} e seu antecessor é ${numero3-1} e o seu sucessor é ${numero3+1}`);
+        }
+
+        // exercicio2();
+
+        function exercicio3(){
+            const dinheiroCarteira = Number(prompt("Informe o valor que possuí na carteira"));
+            console.log(`Valor em carteira é igual a ${dinheiroCarteira}, o valor do dólar hoje é R$5.35, você pode obter ${dinheiroCarteira/5.35}`);
+        }
+
+        // exercicio3();
+
+        function exercicio4(){
+            const precoProduto = Number(prompt("Informe o valor de um produto X"));
+            console.log(`O valor do produto X é ${precoProduto}, com um desconto de 5% o preço ficará ${precoProduto*0,95}`);
+        }
+
+        // exercicio4()
+
+
+        function exercicio41(){
+            const precoProduto = Number(prompt("Informe o valor de um produto X"));
+            const valorFinal = precoProduto * 0.95;
+            const valorFinal2 = precoProduto - (precoProduto * 0.05);
+            console.log(`O valor do produto X é ${precoProduto}, com um desconto de 5% o preço ficará ${valorFinal.toFixed(2)}`);
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>

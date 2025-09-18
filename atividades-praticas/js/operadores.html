@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos Operadores</title>
+</head>
+<body>
+    
+    <p>Aperte F12 para ver os resultados</p>
+
+    <script>
+
+        // VARIÁVEIS
+        console.log("VARIÁVEIS");
+        // var
+        var exemploVar = "Lucas";
+        exemploVar = "João";
+        var exemploVar = "Pedro";
+        console.log(exemploVar);
+ 
+        // let - Não permite redeclarar no mesmo bloco, porém permite alterar valor
+        let exemploLet = 25;
+        exemploLet = 30;
+        // Let exemploLet = 10;
+
+        // const - Não permite redeclarar no mesmo bloco e alterar o valor
+        const exemploConst = 1.50;
+        // exemploConst = 2.20;
+        // const exemploConst = 2.20;
+
+        // TIPOS DE DADOS
+
+        // String - Texto
+        console.log("String - Texto");
+
+        const nome = "Rafael";
+        const sobrenome = 'Arantes';
+        const multiplasLinhas = `primeira linha
+        segunda linha
+        terceira linha
+        [...]`;
+
+        console.log(nome);
+        console.log(nome,sobrenome);
+        console.log(nome+" "+sobrenome);
+        console.log("nome");
+        console.log(`${nome} --- ${sobrenome}`);
+
+        // Numbers - Números
+        console.log("Numbers - Números");
+        
+        const idade = 25;
+        const altura = 1.80;
+        const temperatura = -10.2;
+
+        console.log(idade,altura,temperatura);
+
+        // Booleanos - Bool
+        console.log("Booleanos - Bool");
+        
+        const ativo = true;
+        const inativo = false;
+        const maiorIdade = 18 > idade;
+        console.log(maiorIdade);
+
+        // Null e Undefined
+        console.log("Null e Undefined");
+        
+        let valorNulo = null;
+        let valorIndefinido;
+        valorIndefinido = 10;
+        console.log(valorIndefinido);
+
+        // OPERADORES ARITMÉTICOS
+        console.log("OPERADORES ARITMÉTICOS");
+
+        const a = 2;
+        const b = 4;
+
+        // PEMDAS (Ordem das Operações)
+        console.log(a+b);
+        console.log(a-b);
+        console.log(a*b);
+        console.log(a/b);
+        console.log(a%b);
+        console.log(a**b);
+
+        // Incremento e Decremento
+        console.log("INCREMENTO");
+        let contador = 10;
+        console.log(contador);
+        console.log(++contador);
+        console.log(contador++);
+        console.log(contador);
+
+        console.log("DECREMENTO");
+
+        console.log(contador);
+        console.log(--contador);
+        console.log(contador--);
+        console.log(contador);
+
+        // OPERADORES DE ATRIBUIÇÃO
+        console.log("OPERADORES DE ATRIBUIÇÕES");
+
+        let num = 10;
+
+        // num = num + 5;
+        num += 5;
+        console.log(num);
+
+        num -= 5;
+        console.log(num);
+
+        num *= 5;
+        console.log(num);
+
+        num /= 5;
+        console.log(num);
+
+        // OPERADORES DE COMPARAÇÃO
+        console.log("OPERADORES DE COMPARAÇÃO");
+
+        const x = 5;
+        const y = "5";
+        const z = 10;
+
+        console.log(x == y);
+        console.log(x === y);
+
+        console.log(x > z);
+        console.log(x <= z);
+       
+        // OPERADORES LÓGICOS || && !
+        console.log("OPERADORES LÓGICOS || && !");
+
+        const temIdade = true;
+        const temCNH = false;
+        const temDinheiro = false;
+        const temCarro = true;
+
+        // && Todos tem que concordar
+        console.log("&& Todos tem que concordar");
+        console.log(temIdade && temCNH && temCarro && temDinheiro);
+
+        // || Pelo menos 1 tem que concordar
+        console.log("|| Pelo menos 1 tem que concordar");
+        console.log(temIdade || temCNH || temCarro || temDinheiro);
+
+        // ! Contrário do que é
+        console.log("! Contrário do que é");
+        console.log(!temIdade);
+
+        // CONVERSÕES DE TIPO
+        console.log("CONVERSÕES DE TIPO");
+
+        // IMPLÍCITAS
+        console.log("IMPLÍCITAS");
+        console.log("5" + 5);
+        console.log(5 + "5");
+        console.log("5" - 5);
+        console.log("5" * 5);
+
+        // EXPLÍCITAS
+        console.log("EXPLÍCITAS");
+        // String para Number
+        console.log("String para Number");
+        const textoNumero = "42.7";
+        console.log(parseFloat(textoNumero));
+        console.log(parseInt(textoNumero));
+        console.log(Number(textoNumero));
+        console.log(parseFloat("42px"));
+        console.log(Number("42px"));
+
+        // Number para String
+        console.log("Number para String");
+        const numeroTexto = 123.50;
+        console.log(String(numeroTexto));
+        console.log(numeroTexto.toString());
+        console.log(""+numeroTexto);
+
+        // Number/String para Bool
+        console.log("Number/String para Bool");
+        console.log(Boolean(1));
+        console.log(Boolean(0));
+        console.log(Boolean(""));
+        console.log(Boolean("Rafael"));
+
+        // VERIFICAÇÃO DE TIPO
+        console.log("VERIFICAÇÃO DE TIPO");
+        const numeroPositivo = 10;
+        const nomeCompleto = "Rafael Arantes";
+        console.log(typeof numeroPositivo);
+        console.log(typeof nomeCompleto)
+
+    </script>
+
+
+</body>
+</html>
