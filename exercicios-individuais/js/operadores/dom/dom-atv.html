@@ -85,17 +85,31 @@
         const btnDesconto = document.querySelector("#btn-calcular-desconto")
         const precoFinal = document.querySelector("#resultado_desconto")
 
-        btnDesconto.addEventListener('change', function(){
+        btnDesconto.addEventListener('click',  function(){
             const precoProduto2 = Number(precoProduto.value)
-            const descontoLoja2 = Number(descontoLoja.value) / 100 * precoProduto2
+            const descontoLoja2 = Number((descontoLoja.value) / 100 * precoProduto2)
+            const descontoLoja3 = Number(descontoLoja.value)
 
-            precoFinal.textContent = `Preço original do produto é ${precoProduto}, desconto será de ${descontoLoja}%, ou seja ${descontoLoja2}, sendo assim o preço final do produto será de ${(precoProduto2)}`
-
-
+            precoFinal.textContent = `Preço original do produto é ${precoProduto2} reais, desconto será de ${descontoLoja3}%, ou seja ${descontoLoja2} reais, sendo assim o preço final do produto será de ${(precoProduto2-descontoLoja2).toFixed(2)}reais!`
 
         })
         
 
+        // Calculadora de IMC peso; altura; resultado_imc; btn-calcular-imc
+
+        const peso = document.querySelector("#peso")
+        const altura = document.querySelector("#altura")
+        const btnImc = document.querySelector("#btn-calcular-imc")
+        const resultadoImc = document.querySelector("#resultado_imc")
+
+        btnImc.addEventListener('click', function(){
+            const peso1 = Number(peso.value)
+            const altura1 = Number(altura.value)
+
+            const contaImc = (peso1/(altura1**2))
+            
+        resultadoImc.textContent = `o IMC desta pessoa é ${contaImc}`
+        })
 
 
 
