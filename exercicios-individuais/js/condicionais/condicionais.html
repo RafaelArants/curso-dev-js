@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Condicionais</title>
+</head>
+<body>
+    
+    <p>F12 para ver os resultados!</p>
+
+    <script>
+        function exercicio1(){
+
+        }
+
+        function exercicio2(){
+            
+        }
+
+        function exercicio3(){
+            const numero = Number(prompt("Digite um número"))
+            if (numero %  2 === 0){
+                console.log(`O valor ${numero} é par!`)
+            } else{
+                console.log(`O valor ${numero} é ímpar!`)
+            }
+        }
+
+        // exercicio3()
+
+        function exercicio4(){
+            const preco = Number(prompt("Digite o preço do produto para calcular o frete"))
+
+            if (preco >= 200){
+                console.log(`Frete Grátis - Preço Final ${preco}`)
+            } else if (preco < 200 || preco <= 100){
+                console.log(`Frete de R$ 15,00 - Preço Final ${preco + 15}`)
+            } else if (preco < 100){
+                console.log(`Frete de R$ 25,00 - Preço Final ${preco + 25}` )
+            }
+        }
+
+        // exercicio4()
+
+        function exercicio5(){
+            
+        }
+
+        function exercicio6(){
+            
+        }
+
+        function exercicio7(){
+            
+        }
+
+        function exercicio8(){
+            
+        }
+
+        function exercicio9(){
+            const salario = Number(prompt("Informe seu salário"))
+            const tempoServico = Number(prompt("Informe seu tempo de serviço em anos"))
+
+            if (tempoServico > 5){
+                const bonus = salario * 0.05
+                console(`Você tem direito ao bônus de ${bonus}.`)
+            } 
+            else{
+                console.log("Você não tem direito ao bônus por ter menos de 5 anos de registro.")
+            }
+        }
+
+        // exercicio9()
+
+        function exercicio10(){
+            const idade = Number(prompt("Informe sua idade"))
+            const peso = Number(prompt("Informe o seu peso"))
+            const resfriado = prompt("Está resfriado? SIM ou NÃO").toLowerCase().trim()
+            // lower = Deixa tudo em minúsculo 
+            // Trim = Remove os espaços
+
+            if(idade >= 18 && idade <= 69 && peso > 50 && resfriado === "não"){
+                console.log("Você pode doar sangue! Obrigado por participar!")
+            } else {
+                console.log("Infelizmente você não está apto para doar sangue!")
+            }
+        }
+
+        // exercicio10()
+
+    </script>
+
+</body>
+</html>

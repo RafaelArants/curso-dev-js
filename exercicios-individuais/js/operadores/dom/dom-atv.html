@@ -70,10 +70,11 @@
             resultado.textContent = `Valor em dólar: ${valorDolar.toFixed(2)}`
         })
 
-        // CONVERSOR
-        document.querySelector("#btn-converter").addEventListener('click', function(){
-            document.querySelector("#resultado").textContent = (Number(document.querySelector("#valor-real").value) / 5.35).toFixed(2);
-        })
+        // OUTRA FORMA DE CONVERSOR
+
+        // document.querySelector("#btn-converter").addEventListener('click', function(){
+        //     document.querySelector("#resultado").textContent = (Number(document.querySelector("#valor-real").value) / 5.35).toFixed(2);
+        // })
 
 
 
@@ -93,7 +94,19 @@
             precoFinal.textContent = `Preço original do produto é ${precoProduto2} reais, desconto será de ${descontoLoja3}%, ou seja ${descontoLoja2} reais, sendo assim o preço final do produto será de ${(precoProduto2-descontoLoja2).toFixed(2)}reais!`
 
         })
+
+        // OUTRA FORMA CALCULADORA DE DESCONTO
         
+        // document.querySelector("#btn-calcular-desconto").addEventListener('click', function(){
+        //     const preco = Number(document.querySelector("#preco").value)
+        //     const desconto = Number(document.querySelector("#desconto").value)
+
+        //     const valorFinal = preco - (preco * (desconto / 100))
+
+        //     document.querySelector("#resultado_desconto").textContent = `R$ ${valorFinal.toFixed(2)}`
+        // })
+
+
 
         // Calculadora de IMC peso; altura; resultado_imc; btn-calcular-imc
 
@@ -107,9 +120,28 @@
             const altura1 = Number(altura.value)
 
             const contaImc = (peso1/(altura1**2))
+
             
-        resultadoImc.textContent = `o IMC desta pessoa é ${contaImc}`
+            
+        resultadoImc.textContent = `O seu IMC é ${contaImc.toFixed(2)}`
         })
+
+        // OUTRA FORMA CALCULADORA DE IMC
+
+        // document.querySelector("#btn-calcular-imc").addEventListener('click', function(){
+        //     const peso = Number(document.querySelector("#peso").value)
+        //     const altura = Number(document.querySelector("#altura").value)
+            
+        //     const imc = peso / altura ** 2
+        //     const status = ""
+        //         if (imc < 18.5){
+        //             status = "Abaixo do Peso"
+        //         } else if (imc >= 18.5 && imc <= 24.9){
+        //             status = "Peso Normal"
+        //         }
+
+        // //     document.querySelector("#resultado_imc").textContent = imc.toFixed(2)
+        // })
 
 
 
