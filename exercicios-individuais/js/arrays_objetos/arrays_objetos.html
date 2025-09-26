@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Array e Objetos</title>
+</head>
+<body>
+    
+    <p>Aperte F12</p>
+
+    <script>
+        // Exercício 1
+        const playlist = ["De trás pra frente - Henrique e Juliano", "Apaga Apaga Apaga - Danilo e Davi", "Esqueci - Bruno e Marrone"];
+
+        console.log(playlist[0]);
+
+        playlist.push("Estrelinha - Maria Mendonça");
+
+        playlist.pop();
+
+        console.log(playlist);
+        console.log(playlist.length);
+
+
+        // Professor Resolução - Exercício 1
+        function exercicio1(){
+            const playlist1 = ["De trás pra frente - Henrique e Juliano", "Apaga Apaga Apaga - Danilo e Davi", "Esqueci - Bruno e Marrone"];
+
+            console.log(playlist1[0]);
+
+            playlist1.push("Estrelinha - Maria Mendonça");
+
+            playlist1.pop();
+
+            console.log(playlist1);
+            console.log(playlist1.length);
+        }
+        // exercicio1();
+
+
+        // Exercício 2
+        const filme = {
+            titulo : "Como se fosse a primeira vez",
+            ano : 2004,
+            diretor : "Peter Segal"
+        };
+
+        console.log(`O filme ${filme.titulo}, dirigido por ${filme.diretor}, foi lançado em ${filme.ano}`);
+
+        filme.personagem = ["Henry Roth", "Lucy Whitmore", "Ula"];
+
+        console.log(filme.personagem[0]);
+
+        console.log(filme);
+
+
+        // Professor Resolução - Exercício 2
+        function exercicio2(){
+            const filme1 = {
+            titulo : "Como se fosse a primeira vez",
+            ano : 2004,
+            diretor : "Peter Segal"
+        };
+
+        console.log(`O filme ${filme1.titulo}, dirigido por ${filme1.diretor}, foi lançado em ${filme1.ano}`);
+
+        filme1.personagem = ["Henry Roth", "Lucy Whitmore", "Ula"];
+
+        console.log(filme1.personagem[0]);
+
+        console.log(filme1);
+        }
+        // exercicio2();
+
+
+
+
+    </script>
+
+</body>
+</html>

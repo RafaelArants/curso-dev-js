@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Arrays e Objetos</title>
+</head>
+<body>
+
+    <p>Aperte F12 para ver o resultado.</p>
+    
+    <script>
+
+        // ARRAYS E OBJETOS
+
+        // ARRAYS
+
+        const frutas = ["Maçã", "Banana", "Uva", "Laranja", "Pera"];
+
+        console.log(frutas);
+
+        // Tamanho do Array
+        console.log(frutas.length);
+
+        // Acesso as informações
+        console.log(frutas[0]);
+        console.log(frutas[4]);
+        console.log(frutas[frutas.length - 1]);
+
+        // Adicionar item
+        frutas.push("Abacaxi");
+        console.log(frutas);
+
+        frutas.unshift("Pêssego");
+        console.log(frutas);
+        
+        // Alterar itens
+        frutas[4] = "Jaca";
+        console.log(frutas);
+
+        // Excluir itens
+        frutas.pop();
+        console.log(frutas);
+
+        frutas.shift();
+        console.log(frutas);
+
+        frutas.splice(1,1,"Limão", "Kiwi");
+        console.log(frutas);
+
+        delete frutas[1];
+        console.log(frutas);
+
+
+        // Exibição
+        console.log(frutas.slice(2));
+        console.log(frutas.slice(2, 5)); // 5-1
+        
+        // OBJETOS
+
+        const pessoa = {
+            nome : "Rafael",
+            idade : 21,
+            altura : 1.75,
+            amigos : ["Pedro", "João"]
+        }
+
+        console.log(pessoa);
+        console.log(pessoa["nome"]);
+        console.log(pessoa.nome);
+        console.log(pessoa["amigos"][0]);
+
+        // Inserir
+        pessoa.cidade = "Presidente Prudente";
+        console.log(pessoa);
+
+        // Alterar
+        pessoa.cidade = "Regente Feijó";
+        console.log(pessoa);
+
+        // Excluir
+        delete pessoa.cidade;
+        console.log(pessoa);
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

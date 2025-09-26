@@ -110,38 +110,54 @@
 
         // Calculadora de IMC peso; altura; resultado_imc; btn-calcular-imc
 
-        const peso = document.querySelector("#peso")
-        const altura = document.querySelector("#altura")
-        const btnImc = document.querySelector("#btn-calcular-imc")
-        const resultadoImc = document.querySelector("#resultado_imc")
+        // const peso = document.querySelector("#peso")
+        // const altura = document.querySelector("#altura")
+        // const btnImc = document.querySelector("#btn-calcular-imc")
+        // const resultadoImc = document.querySelector("#resultado_imc")
 
-        btnImc.addEventListener('click', function(){
-            const peso1 = Number(peso.value)
-            const altura1 = Number(altura.value)
+        // btnImc.addEventListener('click', function(){
+        //     const peso1 = Number(peso.value)
+        //     const altura1 = Number(altura.value)
 
-            const contaImc = (peso1/(altura1**2))
+        //     const contaImc = (peso1/(altura1**2))
 
             
             
-        resultadoImc.textContent = `O seu IMC é ${contaImc.toFixed(2)}`
-        })
+        // resultadoImc.textContent = `O seu IMC é ${contaImc.toFixed(2)}`
+        // })
 
         // OUTRA FORMA CALCULADORA DE IMC
 
-        // document.querySelector("#btn-calcular-imc").addEventListener('click', function(){
-        //     const peso = Number(document.querySelector("#peso").value)
-        //     const altura = Number(document.querySelector("#altura").value)
+        document.querySelector("#btn-calcular-imc").addEventListener('click', function(){
+            const peso = Number(document.querySelector("#peso").value)
+            const altura = Number(document.querySelector("#altura").value)
             
-        //     const imc = peso / altura ** 2
-        //     const status = ""
-        //         if (imc < 18.5){
-        //             status = "Abaixo do Peso"
-        //         } else if (imc >= 18.5 && imc <= 24.9){
-        //             status = "Peso Normal"
-        //         }
+            const imc = peso / altura ** 2
+            let status = ""
+            let cor = ""
+                if (imc < 18.5){
+                    status = "Abaixo do Peso";
+                    cor = "yellow"
+                } else if (imc >= 18.5 && imc <= 24.9){
+                    status = "Peso Normal";
+                    cor = "green"
+                } else if (imc >= 25 && imc <= 29.9){
+                    status = "Sobrepeso";
+                    cor = "orange"
+                } else if (imc >= 30 && imc <= 34.9){
+                    status = "Obesidade Grau I";
+                    cor = "red"
+                } else if (imc >= 35 && imc <= 39.9){
+                    status = "Obesidade Grau II";
+                    cor = "firebrick"
+                } else{
+                    status = "Obesidade Grau III";
+                    cor = "darkred"
+                }
 
-        // //     document.querySelector("#resultado_imc").textContent = imc.toFixed(2)
-        // })
+            document.querySelector("#resultado_imc").textContent = `O seu IMC é ${imc.toFixed(2)} - ${status}`
+            document.querySelector("#resultado_imc").style.color = cor;
+        })
 
 
 
