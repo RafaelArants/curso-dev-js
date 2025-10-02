@@ -76,6 +76,8 @@
                 alunos.push({nome, idade, curso});
                 alert("Aluno cadastrado com sucesso!");
                 cancelarCadastro();
+                idAtual = alunos.length - 1;
+                exibirAluno();
             } else{
                 alert("Preencha todos os campos!");
             }
@@ -101,8 +103,33 @@
                 nome.textContent = alunos[idAtual].nome;
                 idade.textContent = alunos[idAtual].idade;
                 curso.textContent = alunos[idAtual].curso;
+                document.querySelector(".ficha-alunos").classList.remove('d-none');
+            } else{
+                document.querySelector(".ficha-alunos").classList.add('d-none');
             }
         }
+
+        function proximo(){
+            idAtual++;
+            if (idAtual >= alunos.length){
+                idAtual = 0
+            }
+            exibirAluno();
+        }
+
+        function anterior(){
+            idAtual--;
+            if (idAtual < 0){
+                idAtual = alunos.length -1;
+            }
+            exibirAluno();
+        }
+
+        const btnProximo = document.querySelector("#btn-proximo");
+        const btnAnterior = document.querySelector("#btn-anterior");
+
+        btnProximo.addEventListener('click',proximo);
+        btnAnterior.addEventListener('click',anterior);
 
     </script>
 </body>
