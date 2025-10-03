@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Funções</title>
+</head>
+<body>
+    <p>F12</p>
+
+    <script>
+        // Função nomeada sem parâmetros
+        function saudacao(){
+            console.log("Olá, mundo!");
+        }
+
+        saudacao();
+
+        // Função nomeada com parâmetros
+        function somar(num1, num2){
+            console.log(num1 + num2);
+            // OU utilizar o retorno
+            return num1 + num2;
+        }
+
+        const soma = somar(2,4);
+        console.log(soma);
+
+        // Função Anônima
+        subtrair = function(num1, num2){
+            return num1 - num2;
+        }
+
+        console.log(subtrair(10,2));
+
+        // Função Anônima com Arrow Function
+        // Return Explícito
+        const multiplicar = (num1,num2) => {
+            return num1 * num2;
+        }
+        console.log(multiplicar(2,2));
+
+        // Return Implícito = Apenas uma execução
+        const divisao = (num1,num2) => num1/num2;
+
+        // Função com parâmetro padrão ou opcional
+        function cumprimentar(nome = "Visitante"){
+            console.log(`Olá ${nome}`);
+        }
+        cumprimentar("Rafael");
+        cumprimentar();
+
+        // Função Callback
+        function calcular(num1,num2,operacao){
+            return operacao(num1,num2);
+        }
+
+        console.log(calcular(2,2,somar));
+        console.log(calcular(2,2,multiplicar));
+
+        // Função Assíncrona - https://brasilapi.com.br/docs#tag/Feriados-Nacionais
+        async function buscarDados(){
+            const resposta = await fetch("https://brasilapi.com.br/api/feriados/v1/2025");
+            const dados = await resposta.json();
+            console.log(dados);
+        }
+        buscarDados();
+
+        // EXERCÍCIOS
+
+        // Exercício 1
+        const calcularArea = (largura,altura) => {
+            return largura*altura;
+        }
+
+        console.log(calcularArea(5,5));
+
+        // Realização do Exercício1 Professor
+        const calcArea = (largura,altura) => largura * altura;
+        console.log(calcArea(10,2));
+
+
+        // Exercício 2
+        function ehPar(num1){
+            if (num1 % 2 === 0){
+                return true
+            } else {
+                return false
+            }
+        }
+
+        console.log(ehPar(5));
+
+        // Realização do Exercício2 Professor
+        function ehPar1(numero){
+            return numero % 2 === 0
+        }
+
+        ehPar1 = (numero) => numero % 2 === 0;
+
+        console.log(ehPar1(2));
+
+
+        // Exercício 3
+        function celciusParaFahrenheit(temperaturaCelsius){
+            const calculo1 = (temperaturaCelsius * 9/5) + 32 
+            return calculo1.toFixed(1);
+        }
+
+        console.log(celciusParaFahrenheit(25));
+
+        // Realização do Exercício3 Professor
+        const celciusParaFahrenheit1 = temperaturaC =>
+        {
+            const calculo = (temperaturaC * 9/5) + 32;
+            return calculo.toFixed(1);
+        }
+
+        console.log(celciusParaFahrenheit1(25));
+
+    </script>
+
+</body>
+</html>
