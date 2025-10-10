@@ -22,13 +22,12 @@ const resumoTotal = document.querySelector("#resumo-total");
 const resumoPorPessoa = document.querySelector("#resumo-pessoa");
 
 
+function realizarConta(){
 const distancia = Number(inputDistancia.value);
 const kmLitro = Number(inputKmLitro.value);
 const preco = Number(inputPreco.value);
 const viajantes = Number(inputViajantes.value);
 
-
-function realizarConta(){
 const litrosNecessario = distancia / kmLitro;
 const custoCombustivelTotal = preco * litrosNecessario;
 const custoPorPessoa = custoCombustivelTotal / viajantes;
@@ -41,8 +40,8 @@ const formatarValores = (valor) => {
     })
 }
 
-resumoTotal.textContent = formatarValores(custoCombustivelTotal)
-resumoPorPessoa.textContent = formatarValores(custoPorPessoa)
+resumoTotal.textContent = formatarValores(custoCombustivelTotal);
+resumoPorPessoa.textContent = formatarValores(custoPorPessoa);
 
 }
 
