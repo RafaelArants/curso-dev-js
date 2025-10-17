@@ -30,6 +30,10 @@ const btnBuscarCep = document.querySelector("#btn-buscar-cep");
 
 const inputBusca = document.querySelector("#user-busca");
 
+const btnDownloadJson = document.querySelector("#btn-download-json")
+const btnUploadJson = document.querySelector("#btn-upload-json")
+const uploadJsonInput= document.querySelector("#upload-json-input")
+
 // FUNÇÕES
 function mostrarTelaLista(){
     telaLista.classList.remove("d-none");
@@ -114,9 +118,9 @@ function excluirUsuario(id){
     }
 }
 
-function renderizarTabela(){
+function renderizarTabela(usuariosParaRenderizar = usuarios){
     tabelaCorpo.innerHTML = "";
-    usuarios.forEach(user => {
+    usuariosParaRenderizar.forEach(user => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
             <td>${user.nome}</td>
@@ -179,15 +183,56 @@ function buscarUsuario(){
     //.toLowerCase = Deixa tudo em minusculo
     //.trim = Apaga espaços em branco no início e no final/
     const textoBusca = inputBusca.value.toLowerCase().trim();
+
     if (textoBusca.length === 0){
         renderizarTabela();
         return;
     }
 
     const usuariosFiltrados = usuarios.filter(user =>{
-        return user.nome.includes(textoBusca) || user.sobrenome.includes(textoBusca) || user.email.includes(textoBusca); 
+        return user.nome.toLowerCase().trim().includes(textoBusca) || user.sobrenome.toLowerCase().trim().includes(textoBusca) || user.email.toLowerCase().trim().includes(textoBusca);
     });
-    renderizarTabela();
+
+    renderizarTabela(usuariosFiltrados);
+}
+
+function baixarJson(){
+    const dados = JSON.stringify(usuarios);
+    const blob = new Blob([dados], {type : "application/json"});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "usuarios.json";
+    link.click();
+    URL.revokeObjectURL(url);
+}
+
+function uploadJson(event){
+    const arquivo = event.target.files[0];
+
+    if (!arquivo) return;
+
+    const leitor = new FileReader();
+
+    leitor.onload = function(e){
+        const conteudoArquivo = e.target.result;
+
+        const usuariosImportados = JSON.parse(conteudoArquivo);
+
+        if (!Array.isArray(usuariosImportados)){
+            alert("O arquivo não possui um array válido!");
+        }
+
+        if (confirm("Deseja substituir todos os dados de usuários pelo do arquivo?")){
+            usuarios = usuariosImportados;
+            salvarNoStorage();
+            renderizarTabela();
+            alert("Usuários importados com sucesso!")
+        }
+    }
+
+    leitor.readAsText(arquivo);
+    
 }
 
 function inicializacao(){
@@ -216,6 +261,12 @@ function inicializacao(){
         }
 
     });
+
+    btnDownloadJson.addEventListener("click", baixarJson);
+
+    btnUploadJson.addEventListener("click", () => uploadJsonInput.click());
+
+    uploadJsonInput.addEventListener("change", uploadJson);
 
     mostrarTelaLista();
 }
