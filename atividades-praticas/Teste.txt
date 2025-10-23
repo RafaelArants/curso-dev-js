@@ -1,0 +1,4 @@
+npm create vite@latest
+
+node.js
+vite.dev
